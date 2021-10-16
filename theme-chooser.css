@@ -1,0 +1,210 @@
+/* Light Colors */
+@media(prefers-color-scheme: light){:root {
+    --silver-RGB: 199, 200, 202;
+    --red-RGB: 238, 184, 176;
+    --orange-RGB: 235, 170, 149;
+    --yellow-RGB: 236, 202, 150;
+    --green-RGB: 164, 191, 178;
+    --blue-RGB: 168, 190, 210;
+    --purple-RGB: 170, 171, 202;
+    --silver-invert-RGB: 99, 100, 102;
+    --red-invert-RGB: 183, 44, 49;
+    --orange-invert-RGB: 218, 83, 52;
+    --yellow-invert-RGB: 200, 111, 12;
+    --green-invert-RGB: 16, 63, 73;
+    --blue-invert-RGB: 37, 71, 109;
+    --purple-invert-RGB: 41, 42, 93;
+}
+}
+/* Dark Colors */
+@media(prefers-color-scheme: dark){:root {
+--silver-RGB: 99, 100, 102;
+--red-RGB: 183, 44, 49;
+--orange-RGB: 218, 83, 52;
+--yellow-RGB: 200, 111, 12;
+--green-RGB: 16, 63, 73;
+--blue-RGB: 37, 71, 109;
+--purple-RGB: 41, 42, 93;
+--silver-invert-RGB: 199, 200, 202;
+--red-invert-RGB: 238, 184, 176;
+--orange-invert-RGB: 235, 170, 149;
+--yellow-invert-RGB: 236, 202, 150;
+--green-invert-RGB: 164, 191, 178;
+--blue-invert-RGB: 168, 190, 210;
+--purple-invert-RGB: 170, 171, 202;
+}
+}
+
+:root {
+--silver: rgb(var(--silver-RGB));
+--red: rgb(var(--red-RGB));
+--orange: rgb(var(--orange-RGB));
+--yellow: rgb(var(--yellow-RGB));
+--green: rgb(var(--green-RGB));
+--blue: rgb(var(--blue-RGB));
+--purple: rgb(var(--purple-RGB));
+--silver-inverted: rgb(var(--silver-invert-RGB));
+--red-inverted: rgb(var(--red-invert-RGB));
+--orange-inverted: rgb(var(--orange-invert-RGB));
+--yellow-inverted: rgb(var(--yellow-invert-RGB));
+--green-inverted: rgb(var(--green-invert-RGB));
+--blue-inverted: rgb(var(--blue-invert-RGB));
+--purple-inverted: rgb(var(--purple-invert-RGB));
+}
+
+:root,:root.silver {
+--theme: var(--silver);
+--theme-inverted: var(--silver-inverted);
+
+}
+
+:root.red {
+--theme: var(--red);
+--theme-inverted: var(--red-inverted);
+}
+
+:root.orange {
+--theme: var(--orange);
+--theme-inverted: var(--orange-inverted);
+}
+
+:root.yellow {
+--theme: var(--yellow);
+--theme-inverted: var(--yellow-inverted);
+}
+
+:root.green {
+--theme: var(--green);
+--theme-inverted: var(--green-inverted);
+}
+
+:root.blue {
+--theme: var(--blue);
+--theme-inverted: var(--blue-inverted);
+}
+
+:root.purple {
+--theme: var(--purple);
+--theme-inverted: var(--purple-inverted);
+}
+
+.silver-button span {
+background: linear-gradient(to right, rgb(99, 100, 102) 50%, rgb(199, 200, 202) 50%);
+}
+.red-button span {
+background: linear-gradient(to right, rgb(183, 44, 49) 50%, rgb(238, 184, 176) 50%);
+}
+.orange-button span {
+background: linear-gradient(to right, rgb(227, 105, 66) 50%, rgb(233, 170, 149) 50%);
+}
+.yellow-button span {
+background: linear-gradient(to right, rgb(212, 130, 7) 50%, rgb(234, 202, 150) 50%);
+}
+.green-button span {
+background: linear-gradient(to right, rgb(16, 80, 91) 50%, rgb(164, 190, 178) 50%);
+}
+.blue-button span {
+background: linear-gradient(to right, rgb(37, 71, 109) 50%, rgb(168, 190, 210) 50%);
+}
+.purple-button span {
+background: linear-gradient(to right, rgb(53, 58, 113) 50%, rgb(171, 172, 202) 50%);
+}
+
+html,
+body {
+height: 100%;
+}
+
+body {
+background-color: var(--theme);
+color: var(--theme-inverted);
+display: grid;
+place-items: center;
+min-height: 100vh;
+height: 100vh;
+background-size: 400% 400%;
+animation: gradient 15s ease infinite;
+}
+
+a {
+color: var(--theme-inverted);
+}
+
+.card {
+border-bottom-color: var(--theme-inverted);
+border-bottom-left-radius: 11px;
+border-bottom-right-radius: 11px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-left-color: var(--theme-inverted);
+border-left-style: solid;
+border-left-width: 4px;
+border-right-color: var(--theme-inverted);
+border-right-style: solid;
+border-right-width: 4px;
+border-top-color: var(--theme-inverted);
+border-top-left-radius: 11px;
+border-top-right-radius: 11px;
+border-top-style: solid;
+border-top-width: 1px;
+background-color: rgba(105, 85, 85, 0.22);
+backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+padding: 15px;
+}
+
+.center {
+text-align: center;
+}
+
+.container {
+width: auto;
+background: transparent;
+text-align: left;
+}
+
+.switcher label {
+height: 45px;
+width: 45px;
+}
+
+.switcher input[type="radio"] {
+display: none;
+}
+
+.switcher .button {
+display: inline-block;
+position: relative;
+width: 30px;
+height: 30px;
+margin: 5px;
+cursor: pointer;
+}
+
+.switcher .button span {
+display: block;
+position: absolute;
+width: 30px;
+height: 30px;
+padding: 0;
+top: 50%;
+left: 50%;
+-webkit-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+-o-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+border-radius: 90%;
+box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+transition: ease 0.3s;
+}
+
+.switcher .button span:hover {
+width: 40px;
+height: 40px;
+}
+
+.footer {
+width: 100%;
+padding: 0 15px;
+background-color: var(--theme);
+color: var(--theme-inverted);
+}

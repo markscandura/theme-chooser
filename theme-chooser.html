@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/7bf34fc55b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="theme-chooser.css" />
+
+</head>
+
+<body class="center">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <div class="center card shadow-lg">
+        <!-- THEME CHOOSER -->
+        <div class="container">
+            <div class="switcher" id="theme-select">
+                <label class="red-button">
+                    <input type="radio" value="red" name="theme-chooser"
+                        onclick="setTheme(this.value) && localStorage.setItem('localStorageTheme',(this.value))">
+                    <div class="button"><span></span></div></input>
+                </label>
+                <label class="orange-button">
+                    <input type="radio" value="orange" name="theme-chooser"
+                        onclick="setTheme(this.value) && localStorage.setItem('localStorageTheme',(this.value))">
+                    <div class="button"><span></span></div></input>
+                </label>
+                <label class="yellow-button">
+                    <input type="radio" value="yellow" name="theme-chooser"
+                        onclick="setTheme(this.value) && localStorage.setItem('localStorageTheme',(this.value))">
+                    <div class="button"><span></span></div></input>
+                </label>
+                <label class="silver-button">
+                    <input type="radio" value="silver" name="theme-chooser"
+                        onclick="setTheme(this.value) && localStorage.setItem('localStorageTheme',(this.value))">
+                    <div class="button"><span></span></div></input>
+                </label>
+                <label class="green-button">
+                    <input type="radio" value="green" name="theme-chooser"
+                        onclick="setTheme(this.value) && localStorage.setItem('localStorageTheme',(this.value))">
+                    <div class="button"><span></span></div></input>
+                </label>
+                <label class="blue-button">
+                    <input type="radio" value="blue" name="theme-chooser"
+                        onclick="setTheme(this.value) && localStorage.setItem('localStorageTheme',(this.value))">
+                    <div class="button"><span></span></div></input>
+                </label>
+                <label class="purple-button">
+                    <input type="radio" value="purple" name="theme-chooser"
+                        onclick="setTheme(this.value) && localStorage.setItem('localStorageTheme',(this.value))">
+                    <div class="button"><span></span></div></input>
+                </label>
+            </div>
+        </div>
+        <!-- THEME CHOOSER -->
+    </div>
+
+    <div>
+        <div class="container">
+            <br>
+            <div class="center">
+                <h1>theme-chooser</h1>
+            </div>
+            <br>
+            <div>
+                <ul>
+                    <li>uses colors based off Apple's 2021 24" iMacs</li>
+                    <li>obeys your device's light/dark mode</li>
+                    <li>stores your choice in localStorage</li>
+                </ul>
+            </div>
+            <br>
+            <div class="center">
+                <h4>
+                    view on <a href="https://codepen.io/markscandura/pen/WNEroby" class="codepen"><i
+                            class="fa fa-codepen"></i></a> or <a href="PLACEHOLDER_URL"><i class="bi bi-github"></i></a>
+                </h4>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer class="footer small mt-auto py-3">
+    <div class="">
+        <div>made by Mark Scandura with a little help from</div>
+        <span><i class="fa fa-codepen"></i> <a href="https://codepen.io/tobiasdev/pen/YWpBxX">CSS | Radio Buttons Color
+                Selector</a> by <a href="https://codepen.io/tobiasdev">Tobias Bogliolo</a></span>
+        <div>&</div>
+        <span><i class="fa fa-codepen"></i> <a href="https://codepen.io/tutsplus/pen/NWpqJNW">Color theme dropdown</a>
+            by <a href="https://codepen.io/tutsplus">Envato Tuts</a></span>
+    </div>
+</footer>
+
+<script type="text/javascript" src="theme-chooser.js"></script>
+
+</html>
